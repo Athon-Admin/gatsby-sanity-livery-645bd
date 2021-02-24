@@ -8,7 +8,7 @@ export default class HeroSection extends React.Component {
                import('@exmg/livery').then(() => {
                     this.setState({
                          Player:
-                              <livery-player streamid="5ddb98f5e4b0937e6a4507f2" style={{ width: '100%' }}></livery-player>
+                              <livery-player streamid="5ddb98f5e4b0937e6a4507f2" style={{ width: '100%', height: '100%' }}></livery-player>
                     })
                }).catch(error => 'An error occurred while loading the slider component')
           }
@@ -41,14 +41,14 @@ export default class HeroSection extends React.Component {
           }
           return (
                <React.Fragment>
-                    <section className={classNames('section', 'hero', { 'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large' })}>
+                    <section  style={{height: '100vh'}} className={classNames('section', 'hero', { 'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large' })}>
                          {_.get(section, 'background_image', null) && (
                               <div className="cover-img" style={toStyleObj('background-image: url(\'' + withPrefix(_.get(section, 'background_image', null)) + '\'); opacity: ' + bg_img_opacity + '; background-size: ' + bg_img_size + '; background-repeat: ' + bg_img_repeat + '; background-position: ' + bg_img_position)} />
                          )}
 
-                         <div className={classNames('container', { 'container--medium': is_vert })}>
-                              {/* {this.state.Player} */}
-                              <embed src="https://embed.liveryvideo.com/?id=5ddb98f5e4b0937e6a4507f2" width="100%" height="100vh"/>
+                         <div style={{height: '100vh'}} className={classNames('container', { 'container--medium': is_vert })}>
+                              {this.state.Player}
+                              {/* <embed src="https://embed.liveryvideo.com/?id=5ddb98f5e4b0937e6a4507f2" width="100%" height="100vh"/> */}
                          </div>
                     </section>
                </React.Fragment>
