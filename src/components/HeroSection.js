@@ -47,7 +47,8 @@ export default class HeroSection extends React.Component {
                          )}
 
                          <div className={classNames('container', { 'container--medium': is_vert })}>
-                              {this.state.Player}
+                              {/* {this.state.Player} */}
+                              <embed src="https://embed.liveryvideo.com/?id=5ddb98f5e4b0937e6a4507f2" width="100%" height="100vh"/>
                          </div>
                     </section>
                </React.Fragment>
