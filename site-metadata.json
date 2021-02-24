@@ -5,23 +5,23 @@
     "mode": "dark",
     "base_font": "sans-serif",
     "header": {
-        "title": "Podcaster",
-        "logo": "images/logo.svg",
+        "title": "indie",
+        "logo": "images/indie.png",
         "logo_alt": "Podcaster logo",
         "has_primary_nav": true,
         "primary_nav_links": [
             {
-                "label": "Episodes",
+                "label": "Music",
                 "url": "/episodes",
                 "style": "link"
             },
             {
-                "label": "About",
+                "label": "Sport",
                 "url": "/about",
                 "style": "link"
             },
             {
-                "label": "Sponsoring",
+                "label": "Entertainment",
                 "url": "/advertising",
                 "style": "link"
             }
@@ -35,24 +35,24 @@
             }
         ],
         "has_anncmnt": true,
-        "anncmnt_content": "Curabitur ac tellus mattis, tempor ipsum eu, eleifend sapien. **[Learn More](/pricing/)**",
+        "anncmnt_content": "The global centre of the rapidly expanding influencer led eCommerce universe **[Learn More](/pricing/)**",
         "anncmnt_align": "left",
         "anncmnt_is_home_only": true,
         "anncmnt_has_close": true,
         "anncmnt_id": "new-episode"
     },
     "footer": {
-        "logo": "images/logo.svg",
+        "logo": "images/indie.png",
         "logo_alt": "Podcaster logo",
         "has_primary_nav": true,
         "primary_nav_links": [
             {
-                "label": "Episodes",
+                "label": "Music",
                 "url": "/episodes",
                 "style": "link"
             },
             {
-                "label": "Subscribe",
+                "label": "Entertainment",
                 "url": "/subscribe",
                 "style": "link"
             },

@@ -2654,28 +2654,28 @@
                 "base_font": "sans-serif",
                 "header": {
                     "type": "header",
-                    "title": "Podcaster",
-                    "logo": "images/logo.svg",
+                    "title": "indie",
+                    "logo": "images/indie.png",
                     "logo_alt": "Podcaster logo",
                     "has_primary_nav": true,
                     "primary_nav_links": [
                         {
                             "type": "action",
-                            "label": "Episodes",
+                            "label": "Music",
                             "url": "/episodes",
                             "style": "link",
                             "stackbit_model_type": "object"
                         },
                         {
                             "type": "action",
-                            "label": "About",
+                            "label": "Sport",
                             "url": "/about",
                             "style": "link",
                             "stackbit_model_type": "object"
                         },
                         {
                             "type": "action",
-                            "label": "Sponsoring",
+                            "label": "Entertainment",
                             "url": "/advertising",
                             "style": "link",
                             "stackbit_model_type": "object"
@@ -2692,7 +2692,7 @@
                         }
                     ],
                     "has_anncmnt": true,
-                    "anncmnt_content": "Curabitur ac tellus mattis, tempor ipsum eu, eleifend sapien. **[Learn More](/pricing/)**",
+                    "anncmnt_content": "The global centre of the rapidly expanding influencer led eCommerce universe **[Learn More](/pricing/)**",
                     "anncmnt_align": "left",
                     "anncmnt_is_home_only": true,
                     "anncmnt_has_close": true,
@@ -2701,20 +2701,20 @@
                 },
                 "footer": {
                     "type": "footer",
-                    "logo": "images/logo.svg",
+                    "logo": "images/indie.png",
                     "logo_alt": "Podcaster logo",
                     "has_primary_nav": true,
                     "primary_nav_links": [
                         {
                             "type": "action",
-                            "label": "Episodes",
+                            "label": "Music",
                             "url": "/episodes",
                             "style": "link",
                             "stackbit_model_type": "object"
                         },
                         {
                             "type": "action",
-                            "label": "Subscribe",
+                            "label": "Entertainment",
                             "url": "/subscribe",
                             "style": "link",
                             "stackbit_model_type": "object"
