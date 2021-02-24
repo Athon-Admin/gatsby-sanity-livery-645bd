@@ -12,7 +12,7 @@ initialGitHash=$(git rev-list --max-parents=0 HEAD)
 node ./studio-build.js $initialGitHash &
 
 # fetch data from CMS through stackbit-pull
-npx @stackbit/stackbit-pull --stackbit-pull-api-url=https://api.stackbit.com/pull/603645bd9cfb300016205bb6
+# npx @stackbit/stackbit-pull --stackbit-pull-api-url=https://api.stackbit.com/pull/603645bd9cfb300016205bb6
 
 # build site
 npm run build
