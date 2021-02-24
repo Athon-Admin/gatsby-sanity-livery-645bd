@@ -186,14 +186,14 @@ sections:
     background_image_size: auto
     background_image_opacity: 98
 seo:
-  title: Stackbit Podcaster Theme
+  title: Indie.Live HQ
   description: The preview of the Podcaster theme
   extra:
     - name: 'og:type'
       value: website
       keyName: property
     - name: 'og:title'
-      value: Stackbit Podcaster Theme
+      value: Indie.Live HQ
       keyName: property
     - name: 'og:description'
       value: The preview of the Podcaster theme
@@ -205,7 +205,7 @@ seo:
     - name: 'twitter:card'
       value: summary_large_image
     - name: 'twitter:title'
-      value: Stackbit Podcaster Theme
+      value: Indie.Live HQ
     - name: 'twitter:description'
       value: The preview of the Podcaster theme
     - name: 'twitter:image'

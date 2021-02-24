@@ -2646,7 +2646,7 @@
             "relPath": "site-metadata.json",
             "data": {
                 "stackbit_model_type": "config",
-                "title": "Stackbit Podcaster Theme",
+                "title": "Indie.Live HQ",
                 "layout_type": "boxed",
                 "style": "bold",
                 "palette": "red",
@@ -4322,7 +4322,7 @@
                 ],
                 "seo": {
                     "type": "stackbit_page_meta",
-                    "title": "Stackbit Podcaster Theme",
+                    "title": "Indie.Live HQ",
                     "description": "The preview of the Podcaster theme",
                     "extra": [
                         {
@@ -4332,7 +4332,7 @@
                         },
                         {
                             "name": "og:title",
-                            "value": "Stackbit Podcaster Theme",
+                            "value": "Indie.Live HQ",
                             "keyName": "property"
                         },
                         {
@@ -4352,7 +4352,7 @@
                         },
                         {
                             "name": "twitter:title",
-                            "value": "Stackbit Podcaster Theme"
+                            "value": "Indie.Live HQ"
                         },
                         {
                             "name": "twitter:description",
