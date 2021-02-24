@@ -13,6 +13,12 @@ export default class HeroSection extends React.Component {
                }).catch(error => 'An error occurred while loading the slider component')
           }
      }
+     isAndroid = () =>
+          typeof navigator !== 'undefined' && /(android)/i.test(navigator.userAgent);
+     isIOS = () =>
+          typeof navigator !== 'undefined' &&
+          !!navigator.platform &&
+          /iPad|iPhone|iPod/.test(navigator.platform);
      render() {
           let section = _.get(this.props, 'section', null);
           let padding_top = _.get(section, 'padding_top', null) || 'medium';
@@ -39,14 +45,18 @@ export default class HeroSection extends React.Component {
           if (((media_pos === 'top') || (media_pos === 'bottom'))) {
                is_vert = true;
           }
+          const style = {
+               minHeight: '500px',
+               ...(this.isAndroid() || this.isIOS() ? { height: "500px" } : {})
+          }
           return (
                <React.Fragment>
-                    <section  style={{height: '500px'}} className={classNames('section', 'hero', { 'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large' })}>
+                    <section style={style} className={classNames('section', 'hero', { 'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large' })}>
                          {_.get(section, 'background_image', null) && (
                               <div className="cover-img" style={toStyleObj('background-image: url(\'' + withPrefix(_.get(section, 'background_image', null)) + '\'); opacity: ' + bg_img_opacity + '; background-size: ' + bg_img_size + '; background-repeat: ' + bg_img_repeat + '; background-position: ' + bg_img_position)} />
                          )}
 
-                         <div style={{height: '100%'}} className={classNames('container', { 'container--medium': is_vert })}>
+                         <div style={{ height: '100%' }} className={classNames('container', { 'container--medium': is_vert })}>
                               {this.state.Player}
                               {/* <embed src="https://embed.liveryvideo.com/?id=5ddb98f5e4b0937e6a4507f2" width="100%" height="100vh"/> */}
                          </div>
