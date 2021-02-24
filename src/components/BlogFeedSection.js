@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {classNames, toStyleObj, withPrefix, getPages} from '../utils';
+import {classNames, toStyleObj, withPrefix, getData, getPages} from '../utils';
 import BlogFeedItemFilter from './BlogFeedItemFilter';
 import SectionActions from './SectionActions';
 
@@ -26,13 +26,13 @@ export default class BlogFeedSection extends React.Component {
         let recent_count = _.get(section, 'recent_count', null);
         let post_count = 0;
         if (_.get(section, 'author', null)) {
-             section_author = _.get(section, 'author', null);
+             section_author = getData(this.props.pageContext.site.data, _.get(section, 'author', null));
         }
         if (_.get(section, 'category', null)) {
-             section_category = _.get(section, 'category', null);
+             section_category = getData(this.props.pageContext.site.data, _.get(section, 'category', null));
         }
         if (_.get(section, 'tag', null)) {
-             section_tag = _.get(section, 'tag', null);
+             section_tag = getData(this.props.pageContext.site.data, _.get(section, 'tag', null));
         }
         return (
             <section className={classNames('section', 'blog-feed', {'has-border': _.get(section, 'has_border', null), 'has-cover': _.get(section, 'background_image', null), 'bg-none': bg_color === 'none', 'bg-primary': bg_color === 'primary', 'bg-secondary': bg_color === 'secondary', 'pt-4': padding_top === 'small', 'pt-6': (padding_top === 'medium') || (padding_top === 'large'), 'pt-md-7': padding_top === 'large', 'pb-4': padding_bottom === 'small', 'pb-6': (padding_bottom === 'medium') || (padding_bottom === 'large'), 'pb-md-7': padding_bottom === 'large'})}>

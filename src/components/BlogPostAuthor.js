@@ -1,14 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {Link, withPrefix, classNames} from '../utils';
+import {getData, Link, withPrefix, classNames} from '../utils';
 
 export default class BlogPostAuthor extends React.Component {
     render() {
         let author = _.get(this.props, 'author', null);
         let container_class = _.get(this.props, 'container_class', null);
         let avatar_size = _.get(this.props, 'avatar_size', null);
-        let author_data = author;
+        let author_data = getData(this.props.pageContext.site.data, author);
         return (
             <div className={container_class}>
             	{author_data.link ? (

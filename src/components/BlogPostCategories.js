@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import {Link, withPrefix} from '../utils';
+import {getData, Link, withPrefix} from '../utils';
 
 export default class BlogPostCategories extends React.Component {
     render() {
@@ -12,7 +12,7 @@ export default class BlogPostCategories extends React.Component {
             <span className={container_class}>
             	{
             	_.map(categories, (category, category_idx) => {
-            	    let category_data = category;
+            	    let category_data = getData(this.props.pageContext.site.data, category);
             	    return (
                 		category_data.link ? (<React.Fragment key={category_idx + '.1'}>
                 			<Link key={category_idx} to={withPrefix(category_data.link)}>{category_data.title}</Link>{(!(category_idx === category_len - 1)) && (', ')}
