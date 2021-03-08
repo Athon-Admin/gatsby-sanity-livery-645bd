@@ -8,7 +8,8 @@ export default class HeroSection extends React.Component {
                import('@exmg/livery').then(() => {
                     this.setState({
                          Player:
-                              <livery-player streamid="5ddb98f5e4b0937e6a4507f2" style={{ width: '100%', height: '100%' }}></livery-player>
+                              <livery-player streamid="602f8ff4e4b0fb5db0c6599a" style={{ width: '100%', height: '100%' }}></livery-player>
+                              /* <embed src="https://embed.liveryvideo.com/?id=5ddb98f5e4b0937e6a4507f2" width="100%" height="100vh"/> */
                     })
                }).catch(error => 'An error occurred while loading the slider component')
           }
@@ -58,7 +59,6 @@ export default class HeroSection extends React.Component {
 
                          <div style={{ height: '100%' }} className={classNames('container', { 'container--medium': is_vert })}>
                               {this.state.Player}
-                              {/* <embed src="https://embed.liveryvideo.com/?id=5ddb98f5e4b0937e6a4507f2" width="100%" height="100vh"/> */}
                          </div>
                     </section>
                </React.Fragment>
